@@ -5,7 +5,7 @@ const cors = require('cors');
 require('dotenv').config()
 
 const app = express()
-
+app.use(cors({ credentials: true, origin: [process.env.WEB_APP_URL] }))
 app.use(express.json())
 
 let countries = [
